@@ -1,0 +1,32 @@
+{
+  "title": "The Art of Carey Pietsch",
+  "email": "digitalscholarship@swarthmore.edu",
+  "description": "The art of carey pietsch",
+  "url": "https://ds-pages.swarthmore.edu",
+  "author": "Digital Scholarship at Swarthmore College Libraries",
+  "github_username":  "swat-ds",
+  "lang": "en",
+  "assets_url": "https://ds-pages.swarthmore.edu/art-of-carey-pietsch/art/",
+  "footer": {
+      "text": "",
+      "image": "/assets/images/logo_grayoutline_words.svg"
+  },
+  "navigation": [
+   { "title": "Home",
+      "url": "/" },
+  { "title": "About",
+      "url": "/" }
+  ],
+  "build": {
+      "inputDirectory": "src",
+      "outputDirectory": "dist",
+      "pathPrefix": "/art-of-carey-pietsch",
+      "loadJS": [
+        { "nodePkg": "jquery" },
+        { "nodePkg": "fuse.js", "target": "fuse.basic.min.js"},
+        { "nodePkg": "viewerjs", "pageClass": "item" },
+        { "nodePkg": "plyr", "pageClass": "item" },
+        { "nodePkg": "isotope-layout", "pageClass": "grid" }
+      ]    
+  }
+}

@@ -1,0 +1,15 @@
+---
+pagination:
+    data: "gsheet"
+    size: 1
+    alias: "item"
+    addAllPagesToCollections: true
+tags: items
+layout: "item"
+permalink: "/items/{{ item.id }}.html"
+eleventyComputed:
+    title: "{{ item.Title }}"
+    date: "{{ item.Date }}"
+    publisher: "{{ item.Publisher }}"
+    thumb: "{{ item.Photos[0] | thumbify }}"
+---

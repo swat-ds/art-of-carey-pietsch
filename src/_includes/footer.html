@@ -1,0 +1,17 @@
+<footer class="container">
+  <div class="row">
+  <p class="column footer-copyright">&#169;{{ "now" | date: "%Y" }} <a href="https://swarthmore.edu">Swarthmore College</a>
+  </p>
+  <p class="column">
+    {{ site.footer.text | markdownify }}
+  </p>
+  <p class="column footer-library"><a href="https://swarthmore.edu"> 
+    <img src="{{ site.footer.image | url }}" alt="Swarthmore College Libraries logo">
+    </a>
+  </p>
+
+  </div>
+</footer>
+</main>
+
+{% include footer_scripts.html %}

@@ -1,0 +1,27 @@
+---
+layout: default
+classes: ['item']
+---
+<div class="row">
+  <div class="column work-images">
+      <ul id="image-list">
+
+        {% for i in item.Photos %}
+            {% if i contains 'mp4' %}
+                <video id="player" playsinline controls data-poster="/path/to/poster.jpg">
+                <source src="{{ i | prepend: site.assets_url }}" type="video/mp4" />
+                </video>
+            {% else %}
+              <li><img src="{{ i | prepend: site.assets_url }}" alt="Image of {{ title }}"></li>
+            {% endif %}
+        {% endfor %}
+      </ul>
+  </div>
+  <div class="column work-meta">
+      <h2 class="work-title">{{ title }}</h2>
+      <span class="work-publisher-date">{% if item.Publisher %}{{ item.Publisher }}, {% endif %}{{ item.Date }}</span>
+      <span class="work-call-number">{{ item["Call Number"] | markdownify }}</span>
+      <span class="work-description"><p>{{ item.Description | markdownify }}</p></span>
+  </div>
+</div>
+

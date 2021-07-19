@@ -1,0 +1,14 @@
+<section class="row collection-grid">
+
+  {% for item in collections.items %}
+
+  <div class="column collection-item" data-date="{{ item.data.date }}" style="background-image:url('{{ item.data.thumb | prepend: site.assets_url }}')">
+      <a href="{{ item.url | url }}">
+      <span class="collection-item-title">{{ item.data.title }}</span>
+      <span class="collection-item-date">{{ item.data.date }}</span>
+      </a>
+  </div>
+
+  {% endfor %}
+
+</section>

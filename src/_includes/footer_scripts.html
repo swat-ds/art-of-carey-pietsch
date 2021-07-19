@@ -1,0 +1,12 @@
+<!-- footer scripts -->
+{% for script in site.build.loadJS %}
+  {% if script.pageClass%}
+    {% if classes contains script.pageClass %}
+    <script type="text/javascript" src="{{ '/' | url }}assets/js/{% if script.target %}{{ script.target}}{% elsif script.nodePkg %}{{ script.nodePkg | getNodeMinJS }}{% else %}{{ script }}{% endif %}" ></script>
+    {% endif %}
+  {% else %}
+    <script type="text/javascript" src="{{ '/' | url }}assets/js/{% if script.target %}{{ script.target}}{% elsif script.nodePkg %}{{ script.nodePkg | getNodeMinJS }}{% else %}{{ script }}{% endif %}" ></script>
+  {% endif %}
+{% endfor %}
+
+<script type="text/javascript" src="{{ '/assets/js/main.js' | url }}?v={{ 'now' | date: '%Y%m%d%H%M' }}"></script>

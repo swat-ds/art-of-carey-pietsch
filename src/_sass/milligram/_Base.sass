@@ -1,0 +1,34 @@
+
+// Base
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*:after,
+*:before
+	box-sizing: inherit
+
+// The base font-size is set at 62.5% for having the convenience
+// of sizing rems in a way that is similar to using px: 1.6rem = 16px
+html
+	box-sizing: border-box
+	font-size: 62.5%
+	// font-size: $base-font-size
+
+
+// Default body styles
+body
+	color: $text-color
+	// font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+	font-family: $sans-serif
+	font-weight: 300
+	font-size: 1.8rem
+	letter-spacing: .01em
+	line-height: 1.6
+	-moz-osx-font-smoothing: grayscale
+
+	// Responsive
+	@media screen and (min-width: 80rem)
+		font-size: 2.2rem
+		letter-spacing: -.05rem
+		line-height: 1.35

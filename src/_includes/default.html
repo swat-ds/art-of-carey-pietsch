@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+{% include head.html %}
+
+<body class="{% if classes %}{{ classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+
+  <main class="wrapper">
+
+    <div class="navigation">
+    <nav class="container">
+      <ul class="row">
+          <li class="column column-25" id="title"><a href="{{ '/' | url }}"><h4>{{ site.title }}</h4></a></li>
+          <li class="column column-25"><a href="{{ '/about' | url }}"><h4>About</h4></a></li>
+          <li class="column column-25" id="search"><a href="{{ '/search' | url }}"><h4>Search</h4></a></li>
+        </ul>
+    </nav>
+    </div>
+
+    {% if classes contains 'header' %}
+    {% include header.html %}
+    {% endif %}
+
+    <section class="container">
+      {{ content }}
+
+      {% if classes contains "facets" %}{% include collection_facets.html %}{% endif %}
+      {% if classes contains "sort" %}{% include collection_sort.html %}{% endif %}
+
+      {% if classes contains "grid" %}{% include collection_grid.html %}{% endif %}
+    </section>
+
+    {% include footer.html %}
+
+</body>
+</html>

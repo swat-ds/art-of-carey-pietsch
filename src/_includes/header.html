@@ -1,0 +1,10 @@
+<header style="background-image:{{ headerImage | join: ', ' }}">
+    <div class="container" id="masthead">
+                <h1>{% if classes contains 'splash' %}{{ site.title}}{% else %}{{ title }}{% endif %}
+                </h1>
+                {% if subtitle %}<span>{{ subtitle }}</span>{% endif %}
+    </div>
+    {% if headerCaption %}
+    <span class="caption">{{ headerCaption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+    {% endif %}
+</header>
