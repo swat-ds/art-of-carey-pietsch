@@ -1,6 +1,8 @@
 # Art of Carey Pietsch
 
-Exhibit site based on Hyper Local Eleventy theme featuring art work of comic artist Carey Pietsch.
+Exhibit site based on Hyper Local Eleventy theme featuring art work of comic artist Carey Pietsch hosted in McCabe Library, Swarthmore College 2021.
+
+[Explore the exhibit site here](https://ds-pages.swarthmore.edu/art-of-carey-pietsch/).
 
 ## [Hyper Local Eleventy Project](https://github.com/swat-ds/every-holly-pentacle)
 
